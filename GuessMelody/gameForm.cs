@@ -23,22 +23,12 @@ namespace GuessMelody
         Random rnd = new Random();
         int musicDuration = 0;
         bool[] players = new bool[2];
+        bool isForwardButtonPressed = false;
         Timer tmpTimer = new Timer();
         public gameForm(mainForm main)
         {
             InitializeComponent();
             this.main = main;
-        }
-
-        private void nextButton_Click(object sender, EventArgs e)
-        {
-            MakeMusic();
-            musicCountLabel.Text = Quiz.musicList.Count.ToString();
-            timer.Start();
-            nextButton.Text = "Next";
-            VisualiseMusic();
-            pauseButton.Enabled = true;
-            resumeButton.Enabled = false;
         }
 
         private void gameForm_Load(object sender, EventArgs e)
@@ -54,6 +44,9 @@ namespace GuessMelody
             progressBar1.Maximum = Quiz.gameDuration;
 
             this.MaximizeBox = false;
+
+            playButton.Enabled = false;
+            pauseButton.Enabled = false;
         }
 
         private void MakeMusic()
@@ -108,15 +101,7 @@ namespace GuessMelody
             PauseGame();
             PauseVisualization();
             pauseButton.Enabled = false;
-            resumeButton.Enabled = true;
-        }
-
-        private void resumeButton_Click(object sender, EventArgs e)
-        {
-            ResumeGame();
-            ResumeVisualization();
-            resumeButton.Enabled = false;
-            pauseButton.Enabled = true;
+            playButton.Enabled = true;
         }
 
         private void gameForm_KeyDown(object sender, KeyEventArgs e)
@@ -135,7 +120,7 @@ namespace GuessMelody
                     PauseGame();
                     PauseVisualization();
                     messageForm message = new messageForm();
-                    message.messageLabel.Text = "Player 1";
+                    message.Text = "Player #1";
                     if (message.ShowDialog() == DialogResult.Yes)
                     {
                         score1Label.Text = (int.Parse(score1Label.Text) + 1).ToString();
@@ -151,7 +136,7 @@ namespace GuessMelody
                     PauseGame();
                     PauseVisualization();
                     messageForm message = new messageForm();
-                    message.messageLabel.Text = "Player 2";
+                    message.Text = "Player #2";
                     if (message.ShowDialog() == DialogResult.Yes)
                     {
                         score2Label.Text = (int.Parse(score2Label.Text) + 1).ToString();
@@ -191,6 +176,8 @@ namespace GuessMelody
                 winning = Winning.Draw;
 
             gameOverForm gameOver = new gameOverForm(this, winning);
+            gameOver.Location = this.Location;
+            gameOver.Size = this.Size;
             gameOver.ShowDialog();
         }
 
@@ -199,7 +186,7 @@ namespace GuessMelody
             if (int.Parse(musicDurationLabel.Text) <= 3)
                 musicDurationLabel.ForeColor = Color.Red;
             else
-                musicDurationLabel.ForeColor = Color.Black;
+                musicDurationLabel.ForeColor = Color.White;
         }
 
         private void WMP_OpenStateChange(object sender, AxWMPLib._WMPOCXEvents_OpenStateChangeEvent e)
@@ -216,7 +203,7 @@ namespace GuessMelody
                 (sender as Label).Text = (int.Parse((sender as Label).Text) - 1).ToString();
         }
 
-        private void VisualiseMusic()
+        private void VisualizeMusic()
         {
             visualMusic.Visible = true;
 
@@ -248,6 +235,110 @@ namespace GuessMelody
         {
             foreach (Panel panel in visualMusic.Controls)
                 panel.Location = new Point(panel.Location.X, rnd.Next(0, 95));
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            ResumeGame();
+            ResumeVisualization();
+            playButton.Enabled = false;
+            pauseButton.Enabled = true;
+        }
+
+        private void playButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (playButton.Enabled)
+                playButton.Image = Properties.Resources.play_pressed;
+        }
+
+        private void playButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (playButton.Enabled)
+                playButton.Image = Properties.Resources.play_unpressed;
+        }
+
+        private void playButton_EnabledChanged(object sender, EventArgs e)
+        {
+            if (playButton.Enabled)
+                playButton.Image = Properties.Resources.play_unpressed;
+            else
+                playButton.Image = Properties.Resources.play_unabled;
+        }
+
+        private void pauseButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (pauseButton.Enabled)
+                pauseButton.Image = Properties.Resources.pause_pressed;
+        }
+
+        private void pauseButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (pauseButton.Enabled)
+                pauseButton.Image = Properties.Resources.pause_unpressed;
+        }
+
+        private void pauseButton_EnabledChanged(object sender, EventArgs e)
+        {
+            if (pauseButton.Enabled)
+                pauseButton.Image = Properties.Resources.pause_unpressed;
+            else
+                pauseButton.Image = Properties.Resources.pause_unabled;
+        }
+
+        public void forwardButton_Click(object sender, EventArgs e)
+        {
+            MakeMusic();
+            musicCountLabel.Text = Quiz.musicList.Count.ToString();
+            timer.Start();
+            pauseButton.Enabled = true;
+            playButton.Enabled = false;
+
+            if (!isForwardButtonPressed)
+                VisualizeMusic();
+            else
+                ResumeVisualization();
+
+            isForwardButtonPressed = true;
+        }
+
+        private void forwardButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (forwardButton.Enabled)
+                forwardButton.Image = Properties.Resources.forward_pressed;
+        }
+
+        private void forwardButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (forwardButton.Enabled)
+                forwardButton.Image = Properties.Resources.forward_unpressed;
+        }
+
+        private void forwardButton_EnabledChanged(object sender, EventArgs e)
+        {
+            if (forwardButton.Enabled)
+                forwardButton.Image = Properties.Resources.forward_unpressed;
+            else
+                forwardButton.Image = Properties.Resources.forward_unabled;
+        }
+
+        private void score2Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void player2Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void score1Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void player1Label_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

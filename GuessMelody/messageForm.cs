@@ -43,7 +43,7 @@ namespace GuessMelody
             if (answerTime == 0)
             {
                 timer1.Stop();
-                System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(@"Resources\sfx1.wav");
+                System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(Properties.Resources.sfx1);
                 soundPlayer.Play();
             }
         }
@@ -60,6 +60,7 @@ namespace GuessMelody
         {
             if (int.Parse(timeLabel.Text) <= 0)
             {
+                songNameLabel.Font = new Font(songNameLabel.Font.FontFamily, 15);
                 songNameLabel.Text = Quiz.songName;
                 songNameLabel.ForeColor = Color.DarkGoldenrod;
                 songNameLabel.Cursor = Cursors.Arrow;

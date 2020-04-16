@@ -39,6 +39,11 @@ namespace GuessMelody
             gameForm gameForm = new gameForm(this);
             gameForm.Show();
             this.Hide();
+
+            tutorialForm tutorialForm = new tutorialForm(gameForm);
+            tutorialForm.Size = gameForm.Size;
+            tutorialForm.Location = gameForm.Location;
+            tutorialForm.ShowDialog();
         }
 
         private void mainForm_Load(object sender, EventArgs e)

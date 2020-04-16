@@ -49,13 +49,14 @@
             this.messageLabel.Location = new System.Drawing.Point(0, 0);
             this.messageLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(484, 33);
+            this.messageLabel.Size = new System.Drawing.Size(384, 38);
             this.messageLabel.TabIndex = 0;
-            this.messageLabel.Text = "Player N";
-            this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.messageLabel.Text = " Is the answer correct?";
+            this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // yesButton
             // 
+            this.yesButton.BackColor = System.Drawing.Color.Transparent;
             this.yesButton.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.yesButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.yesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -63,19 +64,20 @@
             this.yesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.yesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.yesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yesButton.Font = new System.Drawing.Font("Cooper Black", 20.25F);
+            this.yesButton.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.yesButton.Location = new System.Drawing.Point(0, 33);
+            this.yesButton.Location = new System.Drawing.Point(0, 38);
             this.yesButton.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.yesButton.Name = "yesButton";
-            this.yesButton.Size = new System.Drawing.Size(237, 126);
+            this.yesButton.Size = new System.Drawing.Size(191, 196);
             this.yesButton.TabIndex = 1;
             this.yesButton.Text = "YES";
             this.toolTip1.SetToolTip(this.yesButton, "Press \'Enter\' to answer YES");
-            this.yesButton.UseVisualStyleBackColor = true;
+            this.yesButton.UseVisualStyleBackColor = false;
             // 
             // noButton
             // 
+            this.noButton.BackColor = System.Drawing.Color.Transparent;
             this.noButton.DialogResult = System.Windows.Forms.DialogResult.No;
             this.noButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.noButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -83,37 +85,37 @@
             this.noButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.noButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.noButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.noButton.Font = new System.Drawing.Font("Cooper Black", 20.25F);
+            this.noButton.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.noButton.Location = new System.Drawing.Point(239, 33);
+            this.noButton.Location = new System.Drawing.Point(193, 38);
             this.noButton.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.noButton.Name = "noButton";
-            this.noButton.Size = new System.Drawing.Size(245, 126);
+            this.noButton.Size = new System.Drawing.Size(191, 196);
             this.noButton.TabIndex = 2;
             this.noButton.Text = "NO";
             this.toolTip1.SetToolTip(this.noButton, "Press \'Esc\' to answer NO");
-            this.noButton.UseVisualStyleBackColor = true;
+            this.noButton.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.songNameLabel);
-            this.panel1.Controls.Add(this.timeLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 159);
+            this.panel1.Location = new System.Drawing.Point(0, 234);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(484, 90);
+            this.panel1.Size = new System.Drawing.Size(384, 40);
             this.panel1.TabIndex = 4;
             // 
             // songNameLabel
             // 
+            this.songNameLabel.BackColor = System.Drawing.Color.Black;
             this.songNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.songNameLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.songNameLabel.Font = new System.Drawing.Font("Cooper Black", 20.25F);
-            this.songNameLabel.ForeColor = System.Drawing.Color.White;
-            this.songNameLabel.Location = new System.Drawing.Point(0, 49);
+            this.songNameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.songNameLabel.Location = new System.Drawing.Point(0, 2);
             this.songNameLabel.Name = "songNameLabel";
-            this.songNameLabel.Size = new System.Drawing.Size(484, 41);
+            this.songNameLabel.Size = new System.Drawing.Size(384, 38);
             this.songNameLabel.TabIndex = 1;
             this.songNameLabel.Text = "show the answer";
             this.songNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,11 +123,11 @@
             // 
             // timeLabel
             // 
-            this.timeLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.timeLabel.BackColor = System.Drawing.Color.Black;
             this.timeLabel.ForeColor = System.Drawing.Color.White;
-            this.timeLabel.Location = new System.Drawing.Point(0, 0);
+            this.timeLabel.Location = new System.Drawing.Point(331, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(484, 49);
+            this.timeLabel.Size = new System.Drawing.Size(53, 38);
             this.timeLabel.TabIndex = 0;
             this.timeLabel.Text = "0";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,11 +142,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 249);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(384, 274);
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.noButton);
             this.Controls.Add(this.yesButton);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Cooper Black", 20.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -121,7 +121,37 @@
   <data name="music_player_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\music-player-2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="play_unabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_unabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause_unabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pause_unabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sfx1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sfx1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="play_unpressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_unpressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forward_unpressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forward_unpressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forward_unabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forward_unabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forward_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forward_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pause_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause_unpressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pause_unpressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="What lies Beyond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\What lies Beyond.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

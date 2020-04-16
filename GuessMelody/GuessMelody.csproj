@@ -87,6 +87,12 @@
     <Compile Include="settingsForm.Designer.cs">
       <DependentUpon>settingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="tutorialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tutorialForm.Designer.cs">
+      <DependentUpon>tutorialForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="gameForm.resx">
       <DependentUpon>gameForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="settingsForm.resx">
       <DependentUpon>settingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tutorialForm.resx">
+      <DependentUpon>tutorialForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -141,6 +150,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\forward_pressed.png" />
+    <Content Include="Resources\forward_unabled.png" />
+    <Content Include="Resources\forward_unpressed.png" />
+    <Content Include="Resources\pause_unpressed.png" />
+    <Content Include="Resources\pause_pressed.png" />
+    <Content Include="Resources\pause_unabled.png" />
+    <Content Include="Resources\play_pressed.png" />
+    <Content Include="Resources\play_unabled.png" />
+    <Content Include="Resources\play_unpressed.png" />
+    <None Include="Resources\What lies Beyond.jpg" />
     <None Include="Resources\music-player-2.ico" />
     <None Include="Resources\sfx1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

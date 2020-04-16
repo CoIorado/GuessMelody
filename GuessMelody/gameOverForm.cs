@@ -29,13 +29,7 @@ namespace GuessMelody
 
         private void gameOverForm_Load(object sender, EventArgs e)
         {
-            this.ControlBox = false;
-            this.WindowState = FormWindowState.Maximized;
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
-
-            label1.Size = new Size(label1.Size.Width, this.Size.Height / 2);
-            label2.Size = new Size(label2.Size.Width, this.Size.Height / 2);
+            this.MaximizeBox = false;
 
             if (winning == Winning.Player1)
                 label1.Text = "Player 1 \n WON THE GAME";
@@ -54,6 +48,16 @@ namespace GuessMelody
         private void label2_Click(object sender, EventArgs e)
         {
             this.Close();
+            gameForm.Close();
+        }
+
+        private void gameOverForm_Move(object sender, EventArgs e)
+        {
+            gameForm.Location = this.Location;
+        }
+
+        private void gameOverForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             gameForm.Close();
         }
     }
