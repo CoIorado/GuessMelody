@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using yt_DesignUI;
 
 namespace GuessMelody
 {
@@ -16,6 +10,7 @@ namespace GuessMelody
         public settingsForm()
         {
             InitializeComponent();
+            Animator.Start();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -25,13 +20,30 @@ namespace GuessMelody
 
         private void okButton1_Click(object sender, EventArgs e)
         {
-            foreach (string melody in melodyList.Items)
-                Quiz.musicList.Add(melody);
+            if (melodyList.Items.Count == 0)
+            {
+                Quiz.musicList.Clear();
+                Quiz.lastFolder = "";
+            }
+            else
+            {
+                foreach (string melody in melodyList.Items)
+                    Quiz.musicList.Add(melody);
+            }
 
             Quiz.gameDuration = int.Parse(gameDurationCB.Text);
             Quiz.musicDuration = int.Parse(musicDurationCB.Text);
-            Quiz.randomStart = randomMelodyCB.Checked;
-            Quiz.subFolders = subfolderCB.Checked;
+            Quiz.randomStart = randomStart.Checked;
+            Quiz.subFolders = subfolders.Checked;
+            if (string.IsNullOrEmpty(player1Name.Text))
+                Quiz.firstPlayerName = player1Name.TextPreview;
+            else
+                Quiz.firstPlayerName = player1Name.Text;
+            if (string.IsNullOrEmpty(player2Name.Text))
+                Quiz.secondPlayerName = player2Name.TextPreview;
+            else
+                Quiz.secondPlayerName = player2Name.Text;
+
             Quiz.WriteParam();
 
             this.Close();
@@ -45,7 +57,7 @@ namespace GuessMelody
             {
                 string[] musicList = null;
                 
-                musicList = Directory.GetFiles(fbDialog.SelectedPath, "*.mp3", subfolderCB.Checked?SearchOption.AllDirectories:SearchOption.TopDirectoryOnly);
+                musicList = Directory.GetFiles(fbDialog.SelectedPath, "*.mp3", subfolders.Checked?SearchOption.AllDirectories:SearchOption.TopDirectoryOnly);
 
                 Quiz.lastFolder = fbDialog.SelectedPath;
 
@@ -60,8 +72,12 @@ namespace GuessMelody
         {
             gameDurationCB.Text = Convert.ToString(Quiz.gameDuration);
             musicDurationCB.Text = Convert.ToString(Quiz.musicDuration);
-            randomMelodyCB.Checked = Quiz.randomStart;
-            subfolderCB.Checked = Quiz.subFolders;
+            randomStart.Checked = Quiz.randomStart;
+            subfolders.Checked = Quiz.subFolders;
+            player1Name.Text = "";
+            player2Name.Text = "";
+            player1Name.TextPreview = Quiz.firstPlayerName;
+            player2Name.TextPreview = Quiz.secondPlayerName;
 
             if (string.IsNullOrEmpty(Quiz.lastFolder))
                 return;
@@ -74,8 +90,6 @@ namespace GuessMelody
         private void clearButton_Click(object sender, EventArgs e)
         {
             melodyList.Items.Clear();
-            Quiz.musicList.Clear();
-            Quiz.lastFolder = "";
         }
     }
 }

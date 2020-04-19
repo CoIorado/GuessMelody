@@ -7,21 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using yt_DesignUI;
+using yt_DesignUI.Controls;
+using yt_DesignUI.Components;
+using yt_DesignUI.Properties;
 
 namespace GuessMelody
 {
     public partial class mainForm : Form
     {
         private readonly settingsForm settingsForm = new settingsForm();
+        private bool isFirstLaunch = true;              //первый запуск приложения?
 
         public mainForm()
         {
             InitializeComponent();
+            Animator.Start();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -40,10 +46,14 @@ namespace GuessMelody
             gameForm.Show();
             this.Hide();
 
-            tutorialForm tutorialForm = new tutorialForm(gameForm);
-            tutorialForm.Size = gameForm.Size;
-            tutorialForm.Location = gameForm.Location;
-            tutorialForm.ShowDialog();
+            if (isFirstLaunch)
+            {
+                tutorialForm tutorialForm = new tutorialForm(gameForm);
+                tutorialForm.Size = new Size(gameForm.Width, gameForm.Height + 60);
+                tutorialForm.Location = gameForm.Location;
+                tutorialForm.ShowDialog();
+                isFirstLaunch = false;
+            }
         }
 
         private void mainForm_Load(object sender, EventArgs e)

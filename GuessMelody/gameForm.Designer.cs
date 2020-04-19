@@ -30,13 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gameForm));
-            this.WMP = new AxWMPLib.AxWindowsMediaPlayer();
             this.player1Label = new System.Windows.Forms.Label();
             this.player2Label = new System.Windows.Forms.Label();
             this.score1Label = new System.Windows.Forms.Label();
             this.score2Label = new System.Windows.Forms.Label();
             this.musicCountLabel = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.musicDurationLabel = new System.Windows.Forms.Label();
             this.visualMusic = new System.Windows.Forms.Panel();
@@ -56,52 +54,38 @@
             this.forwardButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.WMP)).BeginInit();
+            this.WMP = new AxWMPLib.AxWindowsMediaPlayer();
+            this.progressBar1 = new yt_DesignUI.EgoldsProgressBar();
             this.visualMusic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.forwardButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WMP)).BeginInit();
             this.SuspendLayout();
-            // 
-            // WMP
-            // 
-            this.WMP.Enabled = true;
-            this.WMP.Location = new System.Drawing.Point(308, 155);
-            this.WMP.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.WMP.Name = "WMP";
-            this.WMP.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMP.OcxState")));
-            this.WMP.Size = new System.Drawing.Size(58, 21);
-            this.WMP.TabIndex = 0;
-            this.WMP.Visible = false;
-            this.WMP.OpenStateChange += new AxWMPLib._WMPOCXEvents_OpenStateChangeEventHandler(this.WMP_OpenStateChange);
             // 
             // player1Label
             // 
-            this.player1Label.AutoSize = true;
             this.player1Label.BackColor = System.Drawing.Color.Transparent;
             this.player1Label.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.player1Label.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.player1Label.Location = new System.Drawing.Point(12, 42);
+            this.player1Label.Location = new System.Drawing.Point(24, 42);
             this.player1Label.Name = "player1Label";
             this.player1Label.Size = new System.Drawing.Size(141, 31);
             this.player1Label.TabIndex = 2;
             this.player1Label.Text = "Player #1";
             this.player1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.player1Label.Click += new System.EventHandler(this.player1Label_Click);
             // 
             // player2Label
             // 
-            this.player2Label.AutoSize = true;
             this.player2Label.BackColor = System.Drawing.Color.Transparent;
             this.player2Label.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.player2Label.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.player2Label.Location = new System.Drawing.Point(233, 42);
+            this.player2Label.Location = new System.Drawing.Point(222, 42);
             this.player2Label.Name = "player2Label";
             this.player2Label.Size = new System.Drawing.Size(141, 31);
             this.player2Label.TabIndex = 3;
             this.player2Label.Text = "Player #2";
             this.player2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.player2Label.Click += new System.EventHandler(this.player2Label_Click);
             // 
             // score1Label
             // 
@@ -110,12 +94,11 @@
             this.score1Label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.score1Label.Font = new System.Drawing.Font("Cooper Black", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score1Label.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.score1Label.Location = new System.Drawing.Point(40, 73);
+            this.score1Label.Location = new System.Drawing.Point(60, 73);
             this.score1Label.Name = "score1Label";
             this.score1Label.Size = new System.Drawing.Size(70, 74);
             this.score1Label.TabIndex = 4;
             this.score1Label.Text = "0";
-            this.score1Label.Click += new System.EventHandler(this.score1Label_Click);
             this.score1Label.MouseClick += new System.Windows.Forms.MouseEventHandler(this.score1Label_MouseClick);
             // 
             // score2Label
@@ -125,12 +108,11 @@
             this.score2Label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.score2Label.Font = new System.Drawing.Font("Cooper Black", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score2Label.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.score2Label.Location = new System.Drawing.Point(264, 73);
+            this.score2Label.Location = new System.Drawing.Point(258, 73);
             this.score2Label.Name = "score2Label";
             this.score2Label.Size = new System.Drawing.Size(70, 74);
             this.score2Label.TabIndex = 5;
             this.score2Label.Text = "0";
-            this.score2Label.Click += new System.EventHandler(this.score2Label_Click);
             this.score2Label.MouseClick += new System.Windows.Forms.MouseEventHandler(this.score1Label_MouseClick);
             // 
             // musicCountLabel
@@ -138,20 +120,11 @@
             this.musicCountLabel.AutoSize = true;
             this.musicCountLabel.BackColor = System.Drawing.Color.Transparent;
             this.musicCountLabel.ForeColor = System.Drawing.Color.White;
-            this.musicCountLabel.Location = new System.Drawing.Point(260, 523);
+            this.musicCountLabel.Location = new System.Drawing.Point(272, 523);
             this.musicCountLabel.Name = "musicCountLabel";
             this.musicCountLabel.Size = new System.Drawing.Size(30, 31);
             this.musicCountLabel.TabIndex = 8;
             this.musicCountLabel.Text = "0";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.Color.Tomato;
-            this.progressBar1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.progressBar1.Location = new System.Drawing.Point(18, 312);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(348, 41);
-            this.progressBar1.TabIndex = 9;
             // 
             // timer
             // 
@@ -292,6 +265,7 @@
             // playButton
             // 
             this.playButton.BackColor = System.Drawing.Color.Transparent;
+            this.playButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playButton.Image = global::GuessMelody.Properties.Resources.play_unpressed;
             this.playButton.Location = new System.Drawing.Point(18, 372);
             this.playButton.Name = "playButton";
@@ -307,6 +281,7 @@
             // pauseButton
             // 
             this.pauseButton.BackColor = System.Drawing.Color.Transparent;
+            this.pauseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pauseButton.Image = global::GuessMelody.Properties.Resources.pause_unpressed;
             this.pauseButton.Location = new System.Drawing.Point(142, 372);
             this.pauseButton.Name = "pauseButton";
@@ -322,6 +297,7 @@
             // forwardButton
             // 
             this.forwardButton.BackColor = System.Drawing.Color.Transparent;
+            this.forwardButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forwardButton.Image = global::GuessMelody.Properties.Resources.forward_unpressed;
             this.forwardButton.Location = new System.Drawing.Point(266, 372);
             this.forwardButton.Name = "forwardButton";
@@ -350,11 +326,39 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(194, 492);
+            this.label2.Location = new System.Drawing.Point(200, 492);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 31);
             this.label2.TabIndex = 17;
             this.label2.Text = "Tracks left:";
+            // 
+            // WMP
+            // 
+            this.WMP.Enabled = true;
+            this.WMP.Location = new System.Drawing.Point(308, 155);
+            this.WMP.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.WMP.Name = "WMP";
+            this.WMP.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMP.OcxState")));
+            this.WMP.Size = new System.Drawing.Size(58, 21);
+            this.WMP.TabIndex = 0;
+            this.WMP.Visible = false;
+            this.WMP.OpenStateChange += new AxWMPLib._WMPOCXEvents_OpenStateChangeEventHandler(this.WMP_OpenStateChange);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.progressBar1.BackColorProgressLeft = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.progressBar1.BackColorProgressRight = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.progressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.progressBar1.Location = new System.Drawing.Point(18, 315);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(348, 37);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 21;
+            this.progressBar1.Text = "egoldsProgressBar1";
+            this.progressBar1.Value = 0;
+            this.progressBar1.ValueMaximum = 100;
+            this.progressBar1.ValueMinimum = 0;
             // 
             // gameForm
             // 
@@ -363,6 +367,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(384, 561);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.forwardButton);
@@ -370,7 +375,6 @@
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.visualMusic);
             this.Controls.Add(this.musicDurationLabel);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.musicCountLabel);
             this.Controls.Add(this.score2Label);
             this.Controls.Add(this.score1Label);
@@ -391,11 +395,11 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.gameForm_FormClosed);
             this.Load += new System.EventHandler(this.gameForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameForm_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.WMP)).EndInit();
             this.visualMusic.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.playButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.forwardButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WMP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,7 +413,6 @@
         private System.Windows.Forms.Label score1Label;
         private System.Windows.Forms.Label score2Label;
         private System.Windows.Forms.Label musicCountLabel;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label musicDurationLabel;
         private System.Windows.Forms.Panel visualMusic;
@@ -429,5 +432,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private yt_DesignUI.EgoldsProgressBar progressBar1;
     }
 }

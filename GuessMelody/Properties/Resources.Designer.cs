@@ -63,6 +63,66 @@ namespace GuessMelody.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _061_down_arrow_11 {
+            get {
+                object obj = ResourceManager.GetObject("061-down-arrow-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _061_left_arrow_11 {
+            get {
+                object obj = ResourceManager.GetObject("061-left-arrow-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _061_right_arrow_11 {
+            get {
+                object obj = ResourceManager.GetObject("061-right-arrow-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _061_up_arrow_11 {
+            get {
+                object obj = ResourceManager.GetObject("061-up-arrow-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _088_fast_forward_2 {
+            get {
+                object obj = ResourceManager.GetObject("088-fast-forward-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forward_depressed {
+            get {
+                object obj = ResourceManager.GetObject("forward_depressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forward_pressed {
             get {
                 object obj = ResourceManager.GetObject("forward_pressed", resourceCulture);
@@ -103,6 +163,16 @@ namespace GuessMelody.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pause_depressed {
+            get {
+                object obj = ResourceManager.GetObject("pause_depressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pause_pressed {
             get {
                 object obj = ResourceManager.GetObject("pause_pressed", resourceCulture);
@@ -126,6 +196,16 @@ namespace GuessMelody.Properties {
         internal static System.Drawing.Bitmap pause_unpressed {
             get {
                 object obj = ResourceManager.GetObject("pause_unpressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap play_depressed {
+            get {
+                object obj = ResourceManager.GetObject("play_depressed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

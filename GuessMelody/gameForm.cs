@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using yt_DesignUI;
 using System.Windows.Forms;
 
 namespace GuessMelody
@@ -29,6 +24,7 @@ namespace GuessMelody
         {
             InitializeComponent();
             this.main = main;
+            Animator.Start();
         }
 
         private void gameForm_Load(object sender, EventArgs e)
@@ -38,10 +34,12 @@ namespace GuessMelody
 
             musicCountLabel.Text = Quiz.musicList.Count.ToString();
             musicDurationLabel.Text = Quiz.musicDuration.ToString();
+            player1Label.Text = Quiz.firstPlayerName;
+            player2Label.Text = Quiz.secondPlayerName;
 
             progressBar1.Value = 0;
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = Quiz.gameDuration;
+            progressBar1.ValueMinimum = 0;
+            progressBar1.ValueMaximum = Quiz.gameDuration;
 
             this.MaximizeBox = false;
 
@@ -78,11 +76,11 @@ namespace GuessMelody
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            progressBar1.Value++;
+            progressBar1.PerformStep();
             musicDuration--;
             musicDurationLabel.Text = musicDuration.ToString();
 
-            if (progressBar1.Value == progressBar1.Maximum)
+            if (progressBar1.Value == progressBar1.ValueMaximum)
             {
                 StopVisualization();
                 EndGame();
@@ -319,26 +317,6 @@ namespace GuessMelody
                 forwardButton.Image = Properties.Resources.forward_unpressed;
             else
                 forwardButton.Image = Properties.Resources.forward_unabled;
-        }
-
-        private void score2Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void player2Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void score1Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void player1Label_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

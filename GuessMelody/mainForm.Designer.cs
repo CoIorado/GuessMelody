@@ -29,60 +29,69 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            this.playButton = new System.Windows.Forms.Button();
-            this.settingsButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.playButton = new yt_DesignUI.yt_Button();
+            this.settingsButton = new yt_DesignUI.yt_Button();
+            this.exitButton = new yt_DesignUI.yt_Button();
             this.SuspendLayout();
             // 
             // playButton
             // 
-            this.playButton.FlatAppearance.BorderSize = 2;
-            this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.playButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playButton.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(125, 150);
-            this.playButton.Margin = new System.Windows.Forms.Padding(5);
+            this.playButton.BackColor = System.Drawing.Color.Indigo;
+            this.playButton.BackColorAdditional = System.Drawing.Color.MediumTurquoise;
+            this.playButton.BackColorGradientEnabled = true;
+            this.playButton.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.playButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.playButton.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.ForeColor = System.Drawing.Color.White;
+            this.playButton.Location = new System.Drawing.Point(125, 154);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(245, 60);
-            this.playButton.TabIndex = 0;
-            this.playButton.TabStop = false;
+            this.playButton.RoundingEnable = true;
+            this.playButton.Size = new System.Drawing.Size(245, 56);
+            this.playButton.TabIndex = 19;
             this.playButton.Text = "Play";
-            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.TextHover = null;
+            this.playButton.UseDownPressEffectOnClick = false;
+            this.playButton.UseRippleEffect = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // settingsButton
             // 
-            this.settingsButton.FlatAppearance.BorderSize = 2;
-            this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(125, 230);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(5);
+            this.settingsButton.BackColor = System.Drawing.Color.Indigo;
+            this.settingsButton.BackColorAdditional = System.Drawing.Color.MediumTurquoise;
+            this.settingsButton.BackColorGradientEnabled = true;
+            this.settingsButton.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingsButton.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.ForeColor = System.Drawing.Color.White;
+            this.settingsButton.Location = new System.Drawing.Point(125, 232);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(245, 60);
-            this.settingsButton.TabIndex = 1;
-            this.settingsButton.TabStop = false;
+            this.settingsButton.RoundingEnable = true;
+            this.settingsButton.Size = new System.Drawing.Size(245, 56);
+            this.settingsButton.TabIndex = 20;
             this.settingsButton.Text = "Settings";
-            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.TextHover = null;
+            this.settingsButton.UseDownPressEffectOnClick = false;
+            this.settingsButton.UseRippleEffect = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.FlatAppearance.BorderSize = 2;
-            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(125, 310);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(5);
+            this.exitButton.BackColor = System.Drawing.Color.Indigo;
+            this.exitButton.BackColorAdditional = System.Drawing.Color.MediumTurquoise;
+            this.exitButton.BackColorGradientEnabled = true;
+            this.exitButton.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Location = new System.Drawing.Point(125, 309);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(245, 60);
-            this.exitButton.TabIndex = 2;
-            this.exitButton.TabStop = false;
+            this.exitButton.RoundingEnable = true;
+            this.exitButton.Size = new System.Drawing.Size(245, 56);
+            this.exitButton.TabIndex = 21;
             this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.TextHover = null;
+            this.exitButton.UseDownPressEffectOnClick = false;
+            this.exitButton.UseRippleEffect = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // mainForm
@@ -106,10 +115,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.Button settingsButton;
-        private System.Windows.Forms.Button exitButton;
+        private yt_DesignUI.yt_Button playButton;
+        private yt_DesignUI.yt_Button settingsButton;
+        private yt_DesignUI.yt_Button exitButton;
     }
 }
 

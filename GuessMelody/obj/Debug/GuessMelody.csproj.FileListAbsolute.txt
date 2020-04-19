@@ -1,7 +1,6 @@
 C:\Users\helio\source\repos\GuessMelody\GuessMelody\bin\Debug\GuessMelody.exe.config
 C:\Users\helio\source\repos\GuessMelody\GuessMelody\bin\Debug\GuessMelody.exe
 C:\Users\helio\source\repos\GuessMelody\GuessMelody\bin\Debug\GuessMelody.pdb
-C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.csprojAssemblyReference.cache
 C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.Properties.Resources.resources
 C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.csproj.GenerateResource.cache
 C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.exe
@@ -37,3 +36,8 @@ C:\Users\helio\source\repos\GuessMelody 1.0\GuessMelody\obj\Debug\GuessMelody.ex
 C:\Users\helio\source\repos\GuessMelody 1.0\GuessMelody\obj\Debug\GuessMelody.pdb
 C:\Users\helio\source\repos\GuessMelody 1.0\GuessMelody\obj\Debug\GuessMelody.csprojAssemblyReference.cache
 C:\Users\helio\source\repos\GuessMelody 1.0\GuessMelody\obj\Debug\GuessMelody.tutorialForm.resources
+C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.tutorialForm.resources
+C:\Users\helio\source\repos\GuessMelody\GuessMelody\bin\Debug\yt_DesignUI.exe
+C:\Users\helio\source\repos\GuessMelody\GuessMelody\bin\Debug\yt_DesignUI.pdb
+C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.csproj.CopyComplete
+C:\Users\helio\source\repos\GuessMelody\GuessMelody\obj\Debug\GuessMelody.csprojAssemblyReference.cache

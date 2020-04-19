@@ -17,7 +17,8 @@ namespace GuessMelody
         public static bool randomStart = false;
         public static string lastFolder = "";
         public static bool subFolders = false;
-
+        public static string firstPlayerName = "Player #1";
+        public static string secondPlayerName = "Player #2";
         public static string songName = "";
 
         private static string regKeyName = @"Software\Colorado\GuessMelody";
@@ -45,6 +46,8 @@ namespace GuessMelody
                 rk.SetValue("GameDuration", gameDuration);
                 rk.SetValue("MusicDuration", musicDuration);
                 rk.SetValue("RandomStart", randomStart);
+                rk.SetValue("FirstPlayerName", firstPlayerName);
+                rk.SetValue("SecondPlayerName", secondPlayerName);
             }
             finally
             {
@@ -69,6 +72,8 @@ namespace GuessMelody
                 gameDuration = (int)rk.GetValue("GameDuration");
                 musicDuration = (int)rk.GetValue("MusicDuration");
                 randomStart = Convert.ToBoolean(rk.GetValue("RandomStart"));
+                firstPlayerName = (string)rk.GetValue("FirstPlayerName");
+                secondPlayerName = (string)rk.GetValue("SecondPlayerName");
             }
             finally
             {
